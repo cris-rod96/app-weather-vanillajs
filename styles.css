@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #23222a;
+  color: white;
+  font-family: "Victor Mono", Helvetica, sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main-container {
+  border-radius: 20px;
+  border: 2px solid rgb(49, 49, 49);
+  box-shadow: 5px 5px 20px rgb(49, 49, 49);
+  display: grid;
+  gap: 20px;
+  height: auto;
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+}
+
+.search-container {
+  width: 40%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 70% 30%);
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.input-app {
+  height: 60px;
+  border: 0;
+  outline: 0;
+  background-color: rgb(49, 49, 49, 0.8);
+  border: 2px solid rgb(49, 49, 49);
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px rgb(49, 49, 49, 0.8);
+  color: rgb(146, 142, 142);
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.input-app:focus {
+  box-shadow: 5px 5px 20px rgb(88, 87, 87);
+}
+
+.btn {
+  border: 2px solid rgb(153, 116, 21);
+  background-color: rgb(153, 116, 21);
+  color: rgb(53, 47, 47);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(175, 134, 30);
+}
+
+.results-container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.card-container {
+  height: 600px;
+  border-radius: 12px;
+  border: 1px solid rgb(51, 50, 50);
+  box-shadow: 5px 5px 20px rgb(49, 49, 49);
+  padding: 10px;
+}
+
+.card-containerCity {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cityName {
+  font-size: 30px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.countryName {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.card-containerIcon {
+  height: 300px;
+  text-align: center;
+}
+
+.icon-weather {
+  width: 200px;
+  height: 200px;
+}
+.icon-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-description .descriptionWeather {
+  font-size: 26px;
+  font-style: italic;
+}
+
+.card-containerWeather {
+  border-radius: 10px;
+  border: 3px solid rgb(51, 50, 50);
+  box-shadow: 5px 5px 20px rgb(51, 50, 50);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 150px;
+  margin: 0 auto;
+  place-content: center;
+  text-align: center;
+  width: 90%;
+  gap: 10px;
+  padding: 10px;
+}
+
+.weather {
+  border: 2px dashed rgb(51, 50, 50);
+  height: 100px;
+  display: grid;
+  place-content: center;
+}
+.weather > .weather-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgb(83, 82, 82);
+}
+
+.weather > .weather-value {
+  font-size: 16px;
+  color: rgb(131, 119, 119);
+}
+
+.table-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  border: 1px solid rgb(51, 50, 50);
+  border-radius: 12px;
+  box-shadow: 5px 5px 20px rgb(49, 49, 49);
+  padding: 10px;
+}
+.table-containerData {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.table-containerFilter {
+  width: 80%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 70% 30%);
+  gap: 10px;
+}
+
+.table-data {
+  width: 90%;
+  margin: 20px auto;
+  border: 3px solid rgb(51, 50, 50);
+  box-shadow: 5px 5px 20px rgb(51, 50, 50);
+  border-collapse: collapse;
+}
+
+.thead {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(49, 49, 49);
+  border: 1px solid white;
+}
+
+.thead th:nth-child(1) {
+  width: 50%;
+  border-right: 1px solid rgb(145, 133, 133);
+}
+
+.thead th:nth-child(2) {
+  width: 50%;
+}
+
+.tbody > tr {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  border: 1px solid rgb(49, 49, 49);
+}
+
+.table-containerEmpty {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.table-containerEmpty > i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.table-containerEmpty > p {
+  font-size: 25px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.wait-search {
+  height: 600px;
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border: 1px solid rgb(51, 50, 50);
+  box-shadow: 5px 5px 20px rgb(49, 49, 49);
+}
+.icon-box {
+  margin-bottom: 20px;
+}
+.icon-box > i {
+  font-size: 40px;
+}
+
+.wait-search > p {
+  font-size: 25px;
+}
+
+.btn-view {
+  padding: 10px;
+  border: 1px solid rgb(126, 126, 35);
+  background-color: rgb(126, 126, 35);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  padding: 10px;
+  border: 1px solid rgb(165, 50, 15);
+  background-color: rgb(165, 50, 15);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
